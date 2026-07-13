@@ -1,3 +1,5 @@
 [user]
 	name = Dysterio
 	email = ddysterio@gmail.com
+[core]
+	symlinks = true
