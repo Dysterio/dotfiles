@@ -2,28 +2,38 @@ console_title_template = "{{if .Root}}[ADMIN]{{end}} {{.AbsolutePWD}} ({{.Shell}
 final_space = true
 
 [[blocks]]
-  type = "prompt"
-  alignment = "left"
-  newline = true
+    type = "prompt"
+    alignment = "left"
+    newline = true
 
-  [[blocks.segments]]
-  type = "text"
-  style = "plain"
-  foreground = "#83A598"
-  template = "{{ .AbsolutePWD }}"
+    [[blocks.segments]]
+        type = "text"
+        style = "plain"
+        foreground = "#83A598"
+        template = "{{ .AbsolutePWD }}"
+
+    [[blocks.segments]]
+        type = "git"
+        style = "plain"
+        foreground = "#504945"
+        template = " {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}{{ end }}{{ if gt .Ahead 0 }}{{ end }}</>"
+
+    [blocks.segments.properties]
+        branch_icon = ""
+        fetch_status = true
 
 [[blocks]]
-  type = "prompt"
-  alignment = "left"
-  newline = true
+    type = "prompt"
+    alignment = "left"
+    newline = true
 
-  [[blocks.segments]]
-  type = "text"
-  style = "plain"
-  foreground = "#8EC07C"
-  template = "❯"
+    [[blocks.segments]]
+        type = "text"
+        style = "plain"
+        foreground = "#8EC07C"
+        template = "❯"
 
 [transient_prompt]
-  foreground = "#8EC07C"
-  template = "❯ "
+    foreground = "#8EC07C"
+    template = "❯ "
 
