@@ -55,8 +55,7 @@ return {
                 }
             }
         },
-        quickfile = { enabled = true },
-        terminal = { enabled = true }
+        quickfile = { enabled = true }
     },
     keys = {
         {
