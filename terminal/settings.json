@@ -8,6 +8,10 @@
     "keybindings":
     [
         {
+            "id": null,
+            "keys": "ctrl+shift+k"
+        },
+        {
             "id": "Terminal.CopyToClipboard",
             "keys": "ctrl+c"
         },
