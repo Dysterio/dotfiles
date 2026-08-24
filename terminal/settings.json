@@ -1,11 +1,11 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
-    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "$schema": "https://aka.ms/terminal-profiles-schema-preview",
     "actions": [],
     "copyFormatting": "none",
     "copyOnSelect": false,
-    "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
-    "keybindings": 
+    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "keybindings":
     [
         {
             "id": "Terminal.CopyToClipboard",
@@ -20,24 +20,16 @@
             "keys": "alt+shift+d"
         }
     ],
-    "newTabMenu": 
+    "newTabMenu":
     [
         {
             "type": "remainingProfiles"
         }
     ],
-    "profiles": 
+    "profiles":
     {
-        "defaults": {
-            "font": {
-                "face": "CaskaydiaMono Nerd Font Mono",
-                "weight": "semi-light"
-            },
-            "colorScheme": "Gruvbox Material Dark",
-            "padding": "8",
-            "scrollbarState": "hidden"
-        },
-        "list": 
+        "defaults": {},
+        "list":
         [
             {
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
@@ -48,8 +40,7 @@
             {
                 "commandline": "%SystemRoot%\\System32\\cmd.exe",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-                "hidden": false,
-                "name": "Command Prompt"
+                "hidden": false
             },
             {
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
@@ -65,30 +56,6 @@
             }
         ]
     },
-    "schemes": [
-        {
-            "name": "Gruvbox Material Dark",
-            "background": "#282828",
-            "foreground": "#D4BE98",
-            "cursorColor": "#D4BE98",
-            "selectionBackground": "#3C3836",
-            "black": "#3C3836",
-            "red": "#EA6962",
-            "green": "#A9B665",
-            "yellow": "#D8A657",
-            "blue": "#7DAEA3",
-            "purple": "#D3869B",
-            "cyan": "#89B482",
-            "white": "#D4BE98",
-            "brightBlack": "#3C3836",
-            "brightRed": "#EA6962",
-            "brightGreen": "#A9B665",
-            "brightYellow": "#D8A657",
-            "brightBlue": "#7DAEA3",
-            "brightPurple": "#D3869B",
-            "brightCyan": "#89B482",
-            "brightWhite": "#D4BE98"
-        }
-    ],
+    "schemes": [],
     "themes": []
 }
