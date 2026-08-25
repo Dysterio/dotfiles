@@ -5,6 +5,7 @@
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+    "disableAnimations": true,
     "keybindings":
     [
         {
@@ -20,8 +21,100 @@
             "keys": "ctrl+v"
         },
         {
+            "id": null,
+            "keys": "ctrl+shift+w"
+        },
+        {
             "id": "Terminal.DuplicatePaneAuto",
             "keys": "alt+shift+d"
+        },
+        {
+            "id": "Terminal.ClosePane",
+            "keys": "alt+shift+q"
+        },
+        {
+            "id": "Terminal.SwapPaneDown",
+            "keys": "ctrl+alt+down"
+        },
+        {
+            "id": null,
+            "keys": "alt+down"
+        },
+        {
+            "id": null,
+            "keys": "alt+left"
+        },
+        {
+            "id": "Terminal.MoveFocusLeft",
+            "keys": "ctrl+left"
+        },
+        {
+            "id": "Terminal.MoveFocusDown",
+            "keys": "ctrl+down"
+        },
+        {
+            "id": null,
+            "keys": "alt+right"
+        },
+        {
+            "id": "Terminal.SwapPaneUp",
+            "keys": "ctrl+alt+up"
+        },
+        {
+            "id": "Terminal.MoveFocusRight",
+            "keys": "ctrl+right"
+        },
+        {
+            "id": null,
+            "keys": "alt+up"
+        },
+        {
+            "id": "Terminal.SplitPaneLeft",
+            "keys": "alt+shift+left"
+        },
+        {
+            "id": "Terminal.MoveFocusUp",
+            "keys": "ctrl+up"
+        },
+        {
+            "id": "Terminal.SplitPaneDown",
+            "keys": "alt+shift+down"
+        },
+        {
+            "id": "Terminal.SwapPaneRight",
+            "keys": "ctrl+alt+right"
+        },
+        {
+            "id": "Terminal.ResizePaneDown",
+            "keys": "ctrl+shift+down"
+        },
+        {
+            "id": "Terminal.ResizePaneLeft",
+            "keys": "ctrl+shift+left"
+        },
+        {
+            "id": "Terminal.SplitPaneRight",
+            "keys": "alt+shift+right"
+        },
+        {
+            "id": "Terminal.ResizePaneRight",
+            "keys": "ctrl+shift+right"
+        },
+        {
+            "id": "Terminal.SplitPaneUp",
+            "keys": "alt+shift+up"
+        },
+        {
+            "id": "Terminal.ResizePaneUp",
+            "keys": "ctrl+shift+up"
+        },
+        {
+            "id": null,
+            "keys": "alt+shift+plus"
+        },
+        {
+            "id": "Terminal.SwapPaneLeft",
+            "keys": "ctrl+alt+left"
         }
     ],
     "newTabMenu":
