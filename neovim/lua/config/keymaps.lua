@@ -9,20 +9,42 @@ vim.keymap.set("n", "<A-h>", "<C-o>", { desc = "Go to previous spot" })
 vim.keymap.set("n", "<A-l>", "<C-i>", { desc = "Go to next spot" })
 
 -- Splits
-vim.keymap.set("n", "<leader>h", "<CMD>leftabove vsplit<CR>", { desc = "Create split on left" })
-vim.keymap.set("n", "<leader>j", "<CMD>split<CR>", { desc = "Create split below" })
-vim.keymap.set("n", "<leader>k", "<CMD>aboveleft split<CR>", { desc = "Create split above" })
-vim.keymap.set("n", "<leader>l", "<CMD>vsplit<CR>", { desc = "Create split on right" })
+vim.keymap.set("n", "<leader>h", "<CMD>leftabove vsplit<CR>", { desc = "Create window on left" })
+vim.keymap.set("n", "<leader>j", "<CMD>rightbelow split<CR>", { desc = "Create window below" })
+vim.keymap.set("n", "<leader>k", "<CMD>leftabove split<CR>", { desc = "Create window above" })
+vim.keymap.set("n", "<leader>l", "<CMD>rightbelow vsplit<CR>", { desc = "Create window on right" })
 
-vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move to left split" })
-vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move to lower split" })
-vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move to upper split" })
-vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to right split" })
+vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
+vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move to lower window" })
+vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move to upper window" })
+vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to right window" })
 
-vim.keymap.set('n', '<C-S-h>', '<cmd>vertical resize -2<CR>', { desc = 'Decrease window width' })
-vim.keymap.set('n', '<C-S-j>', '<cmd>resize -2<CR>', { desc = 'Decrease window height' })
-vim.keymap.set('n', '<C-S-k>', '<cmd>resize +2<CR>', { desc = 'Increase window height' })
-vim.keymap.set('n', '<C-S-l>', '<cmd>vertical resize +2<CR>', { desc = 'Increase window width' })
+vim.keymap.set("n", "<C-S-h>", "<cmd>vertical resize -2<CR>", { desc = "Decrease window width" })
+vim.keymap.set("n", "<C-S-j>", "<cmd>resize -2<CR>", { desc = "Decrease window height" })
+vim.keymap.set("n", "<C-S-k>", "<cmd>resize +2<CR>", { desc = "Increase window height" })
+vim.keymap.set("n", "<C-S-l>", "<cmd>vertical resize +2<CR>", { desc = "Increase window width" })
+
+local function swap_window(direction)
+    local current_win = vim.api.nvim_get_current_win()
+
+    vim.cmd("wincmd " .. direction)
+    local target_win = vim.api.nvim_get_current_win()
+    if current_win == target_win then
+        return
+    end
+
+    local current_buf = vim.api.nvim_win_get_buf(current_win)
+    local target_buf = vim.api.nvim_win_get_buf(target_win)
+
+    vim.api.nvim_win_set_buf(current_win, target_buf)
+    vim.api.nvim_win_set_buf(target_win, current_buf)
+    vim.api.nvim_set_current_win(target_win)
+end
+
+vim.keymap.set("n", "<C-M-h>", function() swap_window("h") end, { desc = "Swap buffer left" })
+vim.keymap.set("n", "<C-M-j>", function() swap_window("j") end, { desc = "Swap buffer down" })
+vim.keymap.set("n", "<C-M-k>", function() swap_window("k") end, { desc = "Swap buffer up" })
+vim.keymap.set("n", "<C-M-l>", function() swap_window("l") end, { desc = "Swap buffer right" })
 
 -- Line manipulation
 vim.keymap.set("n", "<A-j>", "<CMD>m .+1<CR>==", { desc = "Move line down" })
