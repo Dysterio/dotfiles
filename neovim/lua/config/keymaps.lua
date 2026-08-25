@@ -53,8 +53,8 @@ vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move selection down" 
 vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
 
 -- Backspace
-vim.keymap.set("i", "<C-H>", "<C-w>", { desc = "Delete previous word" })
-vim.keymap.set("c", "<C-H>", "<C-w>", { desc = "Delete previous word" })
+vim.keymap.set("i", "<C-BS>", "<C-w>", { desc = "Delete previous word" })
+vim.keymap.set("c", "<C-BS>", "<C-w>", { desc = "Delete previous word" })
 
 -- Search
 vim.keymap.set("n", "<Esc>", "<CMD>nohlsearch<CR>", { desc = "Clear search highlights" })
