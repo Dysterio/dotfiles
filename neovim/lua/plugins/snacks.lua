@@ -6,10 +6,6 @@ return {
     opts = {
         bigfile = { enabled = true },
         dashboard = { enabled = true },
-        explorer = {
-            enabled = true,
-            trash = true
-        },
         gitbrowse = { enabled = true },
         indent = {
             enabled = true,
@@ -23,6 +19,7 @@ return {
             sources = {
                 explorer = {
                     hidden = true,
+                    trash = true,
                     layout = {
                         cycle = false,
                         layout = {
@@ -51,6 +48,7 @@ return {
                         list = {
                             keys = {
                                 ["l"] = "preview_file",
+                                ["<S-h>"] = "explorer_close_all",
                                 ["<CR>"] = "open_file"
                             }
                         }
