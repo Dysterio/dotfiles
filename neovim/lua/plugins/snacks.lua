@@ -14,6 +14,7 @@ return {
                 enabled = false
             },
         },
+        lazygit = { enabled = true },
         picker = {
             enabled = true,
             sources = {
@@ -73,6 +74,8 @@ return {
             end,
             desc = "Open file explorer (Snacks)"
         },
+
+        { "<leader>lg", function() Snacks.lazygit() end, desc = "Open lazygit (Snacks)" },
 
         { "<leader>*", function() Snacks.picker.smart() end, desc = "Smart picker (Snacks)" },
         { "<leader>ff", function() Snacks.picker.files() end, desc = "Find file (Snacks)" },
