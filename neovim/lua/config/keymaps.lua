@@ -61,3 +61,9 @@ vim.keymap.set("n", "<Esc>", "<CMD>nohlsearch<CR>", { desc = "Clear search highl
 
 -- Paste
 vim.keymap.set("v", "p", [["_dP]], { desc = "Paste without replacing clipboard" })
+
+-- LSP
+vim.keymap.set("n", "<M-CR>", function() vim.lsp.buf.code_action() end, { desc = "Open code action menu" });
+vim.keymap.set("n", "<leader>d", function() vim.diagnostic.open_float() end, { desc = "View diagnostic" });
+vim.keymap.set("n", "]d", function() vim.diagnostic.jump({ count = 1, float = true }) end, { desc = "Jump to next diagnostic" });
+vim.keymap.set("n", "[d", function() vim.diagnostic.jump({ count = -1, float = true }) end, { desc = "Jump tp previos diagnostic" });
