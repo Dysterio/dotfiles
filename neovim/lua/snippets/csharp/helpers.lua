@@ -1,7 +1,7 @@
 local M = {}
 
 function M.get_namespace()
-    local dir_path = vim.fn.expand("%:p:h")
+    local dir_path = vim.fs.normalize(vim.fn.expand("%:p:h"))
     local csproj = vim.fs.find(
         function(name) return name:match("%.csproj$") end,
         { path = dir_path, upward = true }
@@ -12,7 +12,7 @@ function M.get_namespace()
 
     if csproj then
         project_name = vim.fn.fnamemodify(csproj, ":t:r")
-        local csproj_dir = vim.fn.fnamemodify(csproj, ":h")
+        local csproj_dir = vim.fs.normalize(vim.fn.fnamemodify(csproj, ":h"))
 
         if vim.startswith(dir_path, csproj_dir) and #dir_path > #csproj_dir then
             subfolder_path = dir_path:sub(#csproj_dir + 2)

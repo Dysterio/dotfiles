@@ -11,7 +11,7 @@ return {
                 preset = "none",
 
                 ["<C-Space>"] = { "show", "show_documentation", "hide_documentation" },
-                ["<CR>"] = { "accept", "fallback" },
+                ["<M-CR>"] = { "accept", "fallback" },
 
                 ["<C-k>"] = { "show_signature", "hide_signature", "fallback" },
 
