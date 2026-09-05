@@ -18,10 +18,6 @@
             "keys": "ctrl+c"
         },
         {
-            "id": "Terminal.PasteFromClipboard",
-            "keys": "ctrl+v"
-        },
-        {
             "id": null,
             "keys": "ctrl+shift+w"
         },
@@ -30,12 +26,12 @@
             "keys": "alt+shift+d"
         },
         {
-            "id": "Terminal.ClosePane",
-            "keys": "alt+shift+q"
-        },
-        {
             "id": "Terminal.SwapPaneDown",
             "keys": "ctrl+alt+down"
+        },
+        {
+            "id": "Terminal.ClosePane",
+            "keys": "alt+shift+q"
         },
         {
             "id": null,

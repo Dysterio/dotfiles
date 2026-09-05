@@ -78,7 +78,7 @@ return {
         { "<leader>G", function() Snacks.lazygit() end, desc = "Open lazygit (Snacks)" },
 
         { "<leader>*", function() Snacks.picker.smart() end, desc = "Smart picker (Snacks)" },
-        { "<leader>ff", function() Snacks.picker.files() end, desc = "Find file (Snacks)" },
+        { "<leader>ff", function() Snacks.picker.files({ hidden = true }) end, desc = "Find file (Snacks)" },
         { "<leader>ft", function() Snacks.picker.grep() end, desc = "Find text (Snacks)" },
         { "<leader>fh", function() Snacks.picker.help() end, desc = "Find help page (Snacks)" },
 
